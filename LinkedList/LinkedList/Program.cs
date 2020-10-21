@@ -10,8 +10,8 @@ namespace LinkedList
             Console.WriteLine("\n");
             LinkList list = new LinkList();
             list.Append(56);
-            list.Append(30);
             list.Append(70);
+            list.Insert(2,30);
             list.Display();
         }
     }
