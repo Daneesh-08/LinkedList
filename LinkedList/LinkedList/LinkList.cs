@@ -59,6 +59,13 @@ namespace LinkedList
                 temp.next = node;                
             }
         }
+        internal Node Pop()
+        {
+            if (this.head == null)
+                return null;
+            this.head = this.head.next;
+            return this.head;
+        }
         internal void Display()
         {
             if (head == null)
