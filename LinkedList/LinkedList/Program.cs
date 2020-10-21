@@ -6,11 +6,13 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-            Node head = new Node(56)
-            {
-                next = new Node(30)
-            };
-            head.next.next = new Node(70);
+            Console.WriteLine("Welcome to Linked List !!");
+            Console.WriteLine("\n");
+            LinkList list = new LinkList();
+            list.Add(70);
+            list.Add(30);
+            list.Add(56);
+            list.Display();
         }
     }
 }
