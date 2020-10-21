@@ -13,8 +13,8 @@ namespace LinkedList
             list.Append(70);
             list.Insert(2,30);
             list.Display();
-            _ = list.Pop();
-            Console.WriteLine("After deleting first element of Sequence : ");
+            _ = list.PopLast();
+            Console.WriteLine("After deleting last element of Sequence : ");
             list.Display();
         }
     }
