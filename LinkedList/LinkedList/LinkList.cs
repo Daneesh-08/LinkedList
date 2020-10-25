@@ -4,14 +4,14 @@ using System.Text;
 
 namespace LinkedList
 {
-    class LinkList
+    public class LinkList
     {
         internal Node head;
         public LinkList()
         {
             this.head = null;
         }
-        internal void Add(int item)
+        public void Add(int item)
         {
             Node node = new Node(item);
             if (this.head == null)
@@ -22,7 +22,7 @@ namespace LinkedList
                 head = node;
             }
         }
-        internal void Append(int data)
+        public void Append(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -30,14 +30,12 @@ namespace LinkedList
             else
             {
                 Node temp = head;
-                while (temp.next != null)
-                {
+                while (temp.next != null)                
                     temp = temp.next;
-                }
                 temp.next = node;
             }
         }
-        internal void Insert(int position, int data)
+        public void Insert(int position, int data)
         {
             Node node = new Node(data);
             if (position < 1)
@@ -80,12 +78,27 @@ namespace LinkedList
             newNode.next = null;
             return head;
         }
-        internal void Display()
+        public bool Search(int item)
+        {
+            if (head == null)
+                return false;
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    if (temp.data == item)
+                        return true;
+                    temp = temp.next;
+                }
+                return false;
+            }
+        }
+        public void Display()
         {
             if (head == null)
             {
                 System.Console.WriteLine("List is Empty");
-                return;
             }
             else
             {

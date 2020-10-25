@@ -13,9 +13,7 @@ namespace LinkedList
             list.Append(70);
             list.Insert(2,30);
             list.Display();
-            _ = list.PopLast();
-            Console.WriteLine("After deleting last element of Sequence : ");
-            list.Display();
+            System.Console.WriteLine(list.Search(30));
         }
     }
 }
