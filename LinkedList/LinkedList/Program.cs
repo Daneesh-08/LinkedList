@@ -16,10 +16,15 @@ namespace LinkedList
             if (list.Search(30))
             {
                 list.Insert(3, 40);
+                Console.WriteLine("After Insertion :");
                 list.Display();
             }
             else
                 Console.WriteLine("Node not Found !!");
+            list.DeleteAnyNode(2);
+            Console.WriteLine("After Deletion :");
+            list.Display();
+            Console.WriteLine("Size of Linked List : "+ list.Size());
         }
     }
 }

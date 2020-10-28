@@ -25,5 +25,16 @@ namespace UnitTestProject1
             list.Insert(3, 40);
             Assert.IsTrue(list.Search(40));
         }
+        [TestMethod]
+        public void TestMethod3()
+        {
+            LinkList list = new LinkList();
+            list.Append(56);
+            list.Append(30);
+            list.Append(70);            
+            list.Insert(3, 40);
+            list.DeleteAnyNode(3);
+            Assert.AreEqual(3, list.Size());
+        }
     }
 }

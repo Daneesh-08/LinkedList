@@ -56,6 +56,50 @@ namespace LinkedList
                 node.next = temp.next;
                 temp.next = node;
             }
+        }        
+        public bool Search(int item)
+        {
+            if (head == null)
+                return false;
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    if (temp.data == item)
+                        return true;
+                    temp = temp.next;
+                }
+                return false;
+            }
+        }
+        public int Size()
+        {
+            int size = 0;
+            Node temp = head;
+            while (temp != null)
+            {
+                size++;
+                temp = temp.next;
+            }
+            return size;
+        }
+        public void DeleteAnyNode(int position)
+        {
+            if (head == null)
+                return;
+            Node temp = head;
+            if (position == 0)
+            {
+                head = temp.next;
+                return;
+            }
+            for (int i = 0;temp != null && i < position - 1;i++)
+                temp = temp.next;
+            if (temp == null || temp.next == null)
+                return;
+            Node next = temp.next.next;
+            temp.next = next;
         }
         internal Node Pop()
         {
@@ -78,27 +122,12 @@ namespace LinkedList
             newNode.next = null;
             return head;
         }
-        public bool Search(int item)
-        {
-            if (head == null)
-                return false;
-            else
-            {
-                Node temp = head;
-                while (temp != null)
-                {
-                    if (temp.data == item)
-                        return true;
-                    temp = temp.next;
-                }
-                return false;
-            }
-        }
+
         public void Display()
         {
             if (head == null)
             {
-                System.Console.WriteLine("List is Empty");
+                Console.WriteLine("List is Empty");
             }
             else
             {
