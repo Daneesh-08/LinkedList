@@ -11,9 +11,15 @@ namespace LinkedList
             LinkList list = new LinkList();
             list.Append(56);
             list.Append(70);
-            list.Insert(2,30);
+            list.Insert(2, 30);
             list.Display();
-            System.Console.WriteLine(list.Search(30));
+            if (list.Search(30))
+            {
+                list.Insert(3, 40);
+                list.Display();
+            }
+            else
+                Console.WriteLine("Node not Found !!");
         }
     }
 }

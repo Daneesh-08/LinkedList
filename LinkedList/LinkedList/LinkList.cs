@@ -30,7 +30,7 @@ namespace LinkedList
             else
             {
                 Node temp = head;
-                while (temp.next != null)                
+                while (temp.next != null)
                     temp = temp.next;
                 temp.next = node;
             }
@@ -47,14 +47,14 @@ namespace LinkedList
             }
             else
             {
-                Node temp = head;               
+                Node temp = head;
                 while (position > 2)
                 {
                     temp = temp.next;
                     position--;
                 }
                 node.next = temp.next;
-                temp.next = node;                
+                temp.next = node;
             }
         }
         internal Node Pop()
