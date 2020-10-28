@@ -21,6 +21,9 @@ namespace LinkedList
             }
             else
                 Console.WriteLine("Node not Found !!");
+            list.Sort();
+            Console.WriteLine("After Sorting :");
+            list.Display();
             list.DeleteAnyNode(2);
             Console.WriteLine("After Deletion :");
             list.Display();

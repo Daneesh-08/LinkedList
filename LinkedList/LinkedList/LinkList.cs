@@ -73,6 +73,27 @@ namespace LinkedList
                 return false;
             }
         }
+        public void Sort()
+        {
+            Node temp = head;
+            Node firstval = null;
+            int val = 0;
+            while (temp != null)
+            {
+                firstval = temp.next;
+                while (firstval != null)
+                {
+                    if (temp.data > firstval.data)
+                    {
+                        val = firstval.data;
+                        firstval.data = temp.data;
+                        temp.data = val;
+                    }
+                    firstval = firstval.next;
+                }
+                temp = temp.next;
+            }
+        }
         public int Size()
         {
             int size = 0;
